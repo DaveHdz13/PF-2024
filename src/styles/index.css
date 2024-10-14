@@ -1,3 +1,28 @@
+/* Fonts */
+@font-face {
+  font-family: 'Jersey15';
+  src: url('/fonts/Jersey15-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jersey20';
+  src: url('/fonts/Jersey20-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jersey25';
+  src: url('/fonts/Jersey25-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -19,10 +44,12 @@ nav, output, progress, section, summary, time, video {
 
 /* Set default font size and family */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Jersey20', sans-serif;
   line-height: 1.6;
-  background-color: #222437;
+  background-color: #2e2d33;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 /* Remove list styles */
