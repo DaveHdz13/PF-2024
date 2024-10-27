@@ -1,4 +1,7 @@
 
+---
+import { ViewTransitions } from "astro:transitions";
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -7,6 +10,7 @@
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="../../src/styles/index.css">
 		<title>PF - 2024</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<slot />

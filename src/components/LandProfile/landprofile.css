@@ -25,7 +25,7 @@
   height: 80%;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #ff7f00; /* Outer orange border */
+  border: 4px solid #53d723; /* Outer orange border */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +89,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 0 20px 20px 0;
-  border: #ff7a00 solid;
+  border: #53d723 solid;
   border-left: none;
   animation: 2s textShow;
   animation-delay: 2s;
