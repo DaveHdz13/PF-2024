@@ -1,9 +1,23 @@
 ---
 import NavigationBar from "../components/Navbar/NavigationBar.astro";
 import Layout from "../layouts/Layout.astro";
+import '../styles/proyects.css'
 ---
 
 <Layout>
 	<NavigationBar welcomeStatus={false} />
-  <h1>Proyects</h1>
+  <div class="chips-container">
+    <div class="chip">
+      <p>Check it out!</p>
+      <h1>Proyect 1</h1>
+    </div>
+    <div class="chip">
+      <p>Check it out!</p>
+      <h1>Proyect 2</h1>
+    </div>
+    <div class="chip">
+      <p>Check it out!</p>
+      <h1>Proyect 3</h1>
+    </div>
+  </div>
 </Layout>
