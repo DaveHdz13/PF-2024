@@ -1,9 +1,12 @@
 ---
+// AboutMe.astro
 import NavigationBar from "../components/Navbar/NavigationBar.astro";
 import Layout from "../layouts/Layout.astro";
+import ThreeDContainer from "../components/3D/ThreeDContainer.jsx";
 ---
 
 <Layout>
-	<NavigationBar welcomeStatus={false} />
-  <h1>About Me</h1>
+  <NavigationBar welcomeStatus={false} />
+  <!-- Monta el componente de React con Three.js en Astro -->
+  <ThreeDContainer client:load />
 </Layout>
