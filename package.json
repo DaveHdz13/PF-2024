@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/react": "^3.6.2",
     "@react-three/drei": "^9.115.0",
+    "@react-three/fiber": "^8.17.10",
     "astro": "^4.13.1",
     "gsap": "^3.12.5",
     "three": "^0.170.0"
