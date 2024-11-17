@@ -1,7 +1,7 @@
 // src/components/ThreeDContainer.jsx
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { Loader, OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import Spinner from '../Spinner/Spinner.jsx';
 import * as THREE from 'three';
@@ -16,9 +16,9 @@ const Model = ({ onLoaded }) => {
       '/futuristic-card.glb',
       (gltf) => {
         const loadedModel = gltf.scene;
-        console.log(gltf.scene); // Inspección de la escena
-        loadedModel.rotation.set(0, 4.5, 0); // Ajusta rotación
-        loadedModel.scale.set(1, 1, 1); // Ajusta escala
+        console.log(gltf.scene);
+        loadedModel.rotation.set(0, 4.5, 0);
+        loadedModel.scale.set(1, 1, 1);
         setModel(loadedModel);
         onLoaded(); // Notifica que el modelo terminó de cargar
       },
@@ -30,11 +30,21 @@ const Model = ({ onLoaded }) => {
     );
   }, [onLoaded]);
 
+  const handlePointerOver = () => {
+    document.body.style.cursor = 'pointer';
+  }
+
+  const handlePointerOut = () => {
+    document.body.style.cursor = 'auto';
+  }
+
   return model ? (
     <primitive
       ref={ref}
       object={model}
       onClick={() => console.log("Modelo clickeado!")}
+      onPointerOver={handlePointerOver}
+      onPointerOut={handlePointerOut}
     />
   ) : null;
 };
