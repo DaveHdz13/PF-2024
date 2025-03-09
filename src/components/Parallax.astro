@@ -1,0 +1,23 @@
+---
+import "../styles/parallax.css";
+---
+
+<div class="parallax-container">
+  <div class="parallax-layer layer-1"></div>
+  <div class="parallax-layer layer-2"></div>
+  <div class="parallax-layer layer-3"></div>
+  <div class="parallax-layer layer-4"></div>
+</div>
+
+<script>
+  document.addEventListener("mousemove", (event) => {
+    const layers = document.querySelectorAll<HTMLElement>(".parallax-layer");
+    const x = (event.clientX / window.innerWidth) - 0.5;
+    const y = (event.clientY / window.innerHeight) - 0.5;
+
+    // layers[0].style.transform = `translate(${x * 40}px, ${y * 40}px)`;
+    layers[1].style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+    layers[2].style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+    layers[3].style.transform = `translate(${x * 40}px, ${y * 40}px)`;
+  });
+</script>

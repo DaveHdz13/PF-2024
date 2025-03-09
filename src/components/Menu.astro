@@ -1,0 +1,40 @@
+---
+import "../styles/menu.css";
+---
+
+<nav class="menu" data-step="step-1">
+  <a href="#" class="menu-item" data-status="active">About</a>
+  <a href="#" class="menu-item" data-status="unactive">Contact</a>
+  <a href="#" class="menu-item" data-status="unactive">Blog</a>
+</nav>
+
+<script>
+  document.querySelectorAll(".menu-item").forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      document.querySelectorAll(".menu-item").forEach(el => {
+        el.setAttribute("data-status", "unactive");
+      });
+
+      item.setAttribute("data-status", "active");
+    });
+    item.addEventListener("mouseleave", () => {
+      console.log(item);
+      
+      document.querySelectorAll(".menu-item").forEach(el => {
+        el.setAttribute("data-status", "unactive");
+      });
+
+      item.setAttribute("data-status", "active");
+    });
+
+    item.addEventListener("click", () => {
+      console.log(item);
+      
+      document.querySelectorAll(".menu-item").forEach(el => {
+        el.setAttribute("data-status", "unactive");
+      });
+
+      item.setAttribute("data-status", "active");
+    });
+  });
+</script>

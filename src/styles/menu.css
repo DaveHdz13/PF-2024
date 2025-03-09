@@ -1,0 +1,25 @@
+.menu {
+  width: 12%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.menu-item {
+  width: 100%;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.menu-item[data-status="active"] {
+  border-left: 10px solid white;
+}
