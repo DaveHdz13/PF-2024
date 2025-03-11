@@ -2,11 +2,13 @@
 import "../styles/menu.css";
 ---
 
-<nav class="menu" data-step="step-1">
-  <a href="#" class="menu-item" data-status="active">About</a>
-  <a href="#" class="menu-item" data-status="unactive">Contact</a>
-  <a href="#" class="menu-item" data-status="unactive">Blog</a>
-</nav>
+<div class="menu3D-container">
+  <nav class="menu" data-step="step-1">
+    <a href="#" class="menu-item" data-status="active">About</a>
+    <a href="#" class="menu-item" data-status="unactive">Contact</a>
+    <a href="#" class="menu-item" data-status="unactive">Blog</a>
+  </nav>
+</div>
 
 <script>
   document.querySelectorAll(".menu-item").forEach(item => {
@@ -17,9 +19,7 @@ import "../styles/menu.css";
 
       item.setAttribute("data-status", "active");
     });
-    item.addEventListener("mouseleave", () => {
-      console.log(item);
-      
+    item.addEventListener("mouseleave", () => {      
       document.querySelectorAll(".menu-item").forEach(el => {
         el.setAttribute("data-status", "unactive");
       });
@@ -27,9 +27,7 @@ import "../styles/menu.css";
       item.setAttribute("data-status", "active");
     });
 
-    item.addEventListener("click", () => {
-      console.log(item);
-      
+    item.addEventListener("click", () => {      
       document.querySelectorAll(".menu-item").forEach(el => {
         el.setAttribute("data-status", "unactive");
       });

@@ -1,25 +1,53 @@
-.menu {
+.menu3D-container {
   width: 12%;
+  perspective: 800px;
   position: absolute;
-  top: 50%;
-  left: 10%;
+  top: 60%;
+  left: 15%;
+}
+
+.menu {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  transform-style: preserve-3d;
+  transform: rotateY(35deg);
+  transition: transform 0.3s ease;
+}
+
+.menu:hover {
+  transform: rotateY(0deg);
 }
 
 .menu-item {
+  position: relative;
+  z-index: 0;
   width: 100%;
-  padding-left: 10px;
+  padding-left: 20px;
+  font-size: 2em;
   cursor: pointer;
 }
 
-.menu-item:hover {
-  background-color: #ddd;
-  color: black;
+.menu-item[data-status="active"]::before {
+  content: "";
+  border-left: 10px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  z-index: -1; /* Behind the text */
+  animation: blinkAnimation 1s infinite;
 }
 
-.menu-item[data-status="active"] {
-  border-left: 10px solid white;
+@keyframes blinkAnimation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
