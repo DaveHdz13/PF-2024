@@ -4,7 +4,7 @@ let isMoved = false;
 export const toggleProfile = () => {
   document.querySelector(".profile-tag").addEventListener("click", () => {
     if (!isMoved) {
-      gsap.to(".profile3D-container", { duration: 1, right: "43%" });
+      gsap.to(".profile3D-container", { duration: 1, right: "42%" });
       gsap.fromTo(".title", 
         { rotationY: -15 },
         { rotationY: 0, duration: 1 }
