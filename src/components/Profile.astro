@@ -1,6 +1,9 @@
 ---
+import ProfileDetail from "../components/ProfileDetail.astro";
 import "../styles/profile.css";
 import profile_image from "../assets/gohan.jpeg";
+
+const profileName = "Dave Hdz";
 ---
 
 <div class="profile3D-container">
@@ -8,7 +11,14 @@ import profile_image from "../assets/gohan.jpeg";
     <h1>My Profile</h1>
     <div class="profile-tag">
       <img src={profile_image.src} alt="profile">
-      <h2 class="profile-name">Dave Hdz</h2>
+      <h2 class="profile-name">{profileName}</h2>
     </div>
   </div>
 </div>
+
+<ProfileDetail profileImage={profile_image.src} profileName={profileName} />
+
+<script>
+  import { toggleProfile } from "../helpers/toggleProfile";
+  toggleProfile();
+</script>

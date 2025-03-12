@@ -4,6 +4,7 @@
   position: absolute;
   top: 10%;
   right: 15%;
+  z-index: 2;
 }
 
 .title {
@@ -16,7 +17,7 @@
 }
 
 .title:hover {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg) !important;;
 }
 
 .title > h1 {

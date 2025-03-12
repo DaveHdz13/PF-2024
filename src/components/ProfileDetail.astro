@@ -1,0 +1,13 @@
+---
+import "../styles/profileDetail.css";
+
+const { profileImage, profileName } = Astro.props;
+---
+
+<div class="profileDetail3D-container">
+  <div class="header">
+    <img src={profileImage} alt="profile">
+    <h1 class="profile-name">Hi, I'm {profileName}</h1>
+  </div>
+  <div class="box-model3D"></div>
+</div>
