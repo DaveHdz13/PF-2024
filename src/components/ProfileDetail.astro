@@ -1,12 +1,11 @@
 ---
 import "../styles/profileDetail.css";
 
-const { profileImage, profileName } = Astro.props;
+const { profileName } = Astro.props;
 ---
 
 <div class="profileDetail3D-container">
   <div class="header">
-    <!-- <img src={profileImage} alt="profile"> -->
     <model-viewer src="models/futuristic-card.glb" auto-rotate></model-viewer>
     <h1 class="profile-name">Hi, I'm {profileName}</h1>
   </div>
@@ -17,9 +16,9 @@ const { profileImage, profileName } = Astro.props;
       <div class="divider"></div>
       <h2>Experience fields:</h2>
       <ul>
-        <li>Front-End</li>
-        <li>Debbuging</li>
-        <li>Database connections</li>
+        <li>Web Front-End 🦄</li>
+        <li>Web 3D Develop 🗼</li>
+        <li>Web Back-End 🧐</li>
       </ul>
       <div class="divider"></div>
     </div>
