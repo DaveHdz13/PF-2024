@@ -1,0 +1,64 @@
+---
+import proyectPlaceholder from "../assets/proyect-placeholder.png"
+import "../styles/proyects.styles.css"
+
+const projectList = [
+  {
+    name: 'Project 1',
+    description: 'This is the first project.',
+    image: proyectPlaceholder.src
+  },
+  {
+    name: 'Project 2',
+    description: 'This is the second project.',
+    image: proyectPlaceholder.src
+  },
+  {
+    name: 'Project 3',
+    description: 'This is the third project.',
+    image: proyectPlaceholder.src
+  }
+]
+---
+
+<div class="ui-proyects">
+  <h1>Proyects</h1>
+  <div class="proyect-list">
+    {
+      projectList.map((project) => {
+        return (
+          <div class="proyect-item" data-status="unactive">
+            <h2>{project.name}</h2>
+            <img src={project.image} alt={project.name} />
+          </div>
+        )
+      })
+    }
+  </div>
+  <div class="preview-proyect">
+    <div class="preview-item">
+      <img src={projectList[0].image} alt={projectList[0].name} />
+      <div class="info-preview">
+        <h2>{projectList[0].name}</h2>
+        <p>Description</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const items = document.querySelectorAll(".proyect-item");
+
+  items.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      items.forEach(el => el.setAttribute("data-status", "unactive"));
+      item.setAttribute("data-status", "active");
+    });
+  });
+
+  document.body.classList.add("fade-out");
+
+  window.addEventListener("load", () => {
+    document.body.classList.add("fade-in");
+  });
+</script>

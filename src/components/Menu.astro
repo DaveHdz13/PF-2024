@@ -4,7 +4,7 @@ import "../styles/menu.css";
 
 <div class="menu3D-container">
   <nav class="menu" data-step="step-1">
-    <a href="#" class="menu-item" data-status="active">Proyects</a>
+    <a href="#" class="menu-item" data-status="active" data-link="/proyects">Proyects</a>
     <a href="#" class="menu-item" data-status="unactive">About</a>
     <a href="#" class="menu-item" data-status="unactive">Contact</a>
   </nav>
@@ -33,6 +33,17 @@ import "../styles/menu.css";
       });
 
       item.setAttribute("data-status", "active");
+
+      const targetUrl = item.getAttribute("data-link");
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 500);
+
+      window.addEventListener("load", () => {
+        document.body.classList.add("fade-in");
+      });
     });
   });
 </script>
